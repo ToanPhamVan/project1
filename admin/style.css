@@ -1,0 +1,257 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* Main code for style  */
+.wrapper
+{
+    height: 660px;
+    width: 1350px;
+    /* background-color: red; */
+}
+.index-header{
+    height: 130px;
+    width: 1364px;
+    background-color: black;
+    padding: 10px;
+}
+
+/* header img{
+    padding-left: 55px;
+} */
+/* .logo{
+    padding-left: 30px;
+    color:white;
+    float:left; 
+    font-size: 24px;
+} */
+.index-section {
+    height: 450px;
+    width: 1364px;
+    background-color:gray;
+   
+}
+.index-footer{
+    height: 82px;
+    width: 1361px;
+    background-color: black;
+}
+.logo {
+    float: left;
+    padding-left: 20px;
+}
+.logo img {
+    padding-left: 40px;
+}
+
+li a{
+    color: white;
+    text-decoration: none;
+}
+
+.index-nav{
+    float: right;
+    word-spacing: 30px;
+    padding:20px;
+}
+
+.index-nav li{
+    display: inline-block;
+    line-height: 80px;
+}
+.index-section{
+    height: 550px;
+    background-image: url(images/1.jpg);
+    margin-top: 0px;
+
+}
+.box{
+    height: 300px;
+    width: 450px;
+    background-color: grey;
+    margin:  70px auto;
+    opacity: .7;
+    color: white;
+    /* position: relative; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+.index-footer {
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+
+        /* login-student    */
+
+
+
+.login_student_section {
+    height: 550px;
+    background-image: url(images/3.jpg); 
+    color: white;
+    /* align-items: center; */
+    text-align: center;
+    position: relative;
+    top: -20px;
+}
+.login_student_form  {
+    height: 400px;
+    width: 400px;
+    background-color: #48D1CC;
+    display: inline-block;
+    opacity: .7;
+    position: relative;
+    top: 10%;
+}
+
+
+form .login{
+    margin:auto 70px;
+}
+.login-footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px
+}   
+
+
+
+
+ 
+
+
+
+/* --------------Registration--------------- */
+
+.registration_section {
+    height: 630px;
+    background-image: url(images/4.png);
+    margin-top: -50px; 
+    color: white;
+    align-items: center;
+    text-align: center; 
+    position: relative;
+    top: -20px;
+
+}
+.registration_form {
+    height: 600px;
+    max-width: 550px;
+    background-color: black;
+    margin: 70px auto;
+    opacity: .7;
+    color: white;
+    position: relative;
+    top: 2.5%;
+}
+.registration_form_input{
+    margin: auto 30px;
+}
+
+/* -------------------Feedback-------------- */
+
