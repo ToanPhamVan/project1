@@ -105,8 +105,7 @@
             
     </div>
     <h2>List Of Books</h2>
-     <?php
-        
+    <?php
         if(!isset($_SESSION['login_user']))
         {
             if(isset($_POST['submit'])){
@@ -237,7 +236,7 @@
                         mysqli_query($db,"UPDATE `books` SET `status`='Not Available' WHERE quantity =0;");
                     }
                     ?>
-                    ?>
+                    
                     <tr>
                          <td><?=$row['bid']?> </td>
                          <td><img class="img-rounded" style="width: 100px;height:100px;"src="images/<?=$row['img']?>" alt=""></td>

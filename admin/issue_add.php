@@ -82,7 +82,7 @@ use function PHPSTORM_META\sql_injection_subst;
                 <?php
             }
                 else{
-                mysqli_query($db,"INSERT INTO `issue_book` VALUES('$_POST[issue_id]','$_POST[id]','$_POST[bid]','$_POST[issue_time]','$_POST[return_time]',DEFAULT, DEFAULT)");
+                mysqli_query($db,"INSERT INTO `issue_book` VALUES('$_POST[issue_id]','$_POST[id]','$_POST[bid]','$_POST[issue_time]','$_POST[return_time]',DEFAULT, DEFAULT,DEFAULT)");
                 mysqli_query($db,"UPDATE `books` SET `quantity`= books.quantity-1 WHERE bid = $_POST[bid]");
                 header("location: issue_book.php");
                 ?>
