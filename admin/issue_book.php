@@ -41,16 +41,18 @@
             <th>Issue Time</th>
             <th>Expected Return Time</th>
             <th>Status</th>
-            <th>Expired</th>
+            <!-- <th>Expired</th> -->
             <th>Update</th>
 
 
 
         </tr>
         <?php
+        $d = date('Y-m-d');
         while($row = mysqli_fetch_assoc($res)){
             $is_returned = 'Returned';
             $i_id = $row['issue_id'];
+            $b_id = $row['bid'];
             
 
             ?>
@@ -62,8 +64,7 @@
                 <td><?=$row['name']?></td>
                 <td><?=$row['issue_time']?></td>
                 <td><?=$row['return_time']?></td>
-                <td><?=$row['status']?></td>
-                <td><?=$row['expired']?></td>
+                <td><?=$row['status']?><br> <?=$row['expired']?></td>
                 <?php
                 if($row['status']==$is_returned){
 
@@ -77,18 +78,33 @@
                     <td>
                     <form action="issue_book_update.php" method="get">
                     <input type="hidden" name="GetIID" value="<?= $i_id ?>">
-                    <input type="hidden" name="pressed_button_time" value="<?= date('Y-m-d H:i:s') ?>">
+                    <input type="hidden" name="GetBID" value="<?= $b_id ?>">
+                    <input type="hidden" name="pressed_button_time" value="<?= date('Y-m-d') ?>">
                     <input type="hidden" name="expected_time" value="<?= $row['return_time'] ?>">
-
                     <button name="submit1" type="submit" class="btn btn-success">Returned</button>
                     </form>
                     </td>
                     <?php
+                    $return = $row['return_time'];
+                    $id = $row['issue_id'];
+                    if(!isset($_GET['submit1'])){
+                        if($return < $d){
+                            $query = "UPDATE issue_book SET expired = 'Yes' where issue_id = $id";
+                            
+                        }
+                        else
+                            $query = "UPDATE issue_book SET expired = 'No' where issue_id = $id";
+    
+                    }
+                    $result = mysqli_query($db,$query);
                     
                 }
-                if(!isset($_GET['GetIID'])){
-                    
-                }
+               
+                // if($result){
+                //     header("location: issue_book.php");
+                // }
+                // else
+                // echo "You were wrong at st";
                 ?>
                 
                     
@@ -96,8 +112,8 @@
             </tr>
             <?php
         }
-    $d = date('Y-m-d H:i:s');
-    echo $d;
+     
+    // echo $d;
         ?>
 
     

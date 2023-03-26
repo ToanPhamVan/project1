@@ -39,11 +39,11 @@
         
     <section class="login_student_section">
         <form class="login_student_form" name="login" action="" method="post">
-            <h1 >Library Management System</h1> <br>
+            <h1>Library Management System</h1> <br>
             <h1>User Login Form </h1>
             <div class="login">
-                <input class="form-control" type="text" name="username" placeholder="Username" required> <br>
-                <input class="form-control" type="password" name="password" placeholder="Enter your password" required> <br>
+                <input class="form-control" type="text" name="username" placeholder="Username"autocomplete="new-username"  required> <br>
+                <input class="form-control" type="password" name="password" placeholder="Enter your password" autocomplete="new-password"  required> <br>
                 <input class="btn btn-default" type="submit" name="submit" value="Login" style="color: black; width: 70px; height: 30px;"> <br>
                 <div class="login-footer">
                     <a href="update_password.php">Forgot password</a>
