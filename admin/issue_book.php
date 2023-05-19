@@ -70,7 +70,7 @@
             
             if($row['issue_id']==$_POST['search'] || $row['roll'] == $_POST['search']){
                 ?>
-           
+            
             <tr>
                 
                 <td><?=$row['issue_id']?></td>
@@ -137,7 +137,7 @@
             <?php
             $d = date('Y-m-d');
             while($row = mysqli_fetch_assoc($res)){
-                $fine_per_day = 1;
+                $fine_per_day = 2;
                 $is_returned = 'Returned';
                 $i_id = $row['issue_id'];
                 $b_id = $row['bid'];

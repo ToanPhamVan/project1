@@ -69,42 +69,21 @@
 <body>
     <!--  ___________side nav_____________-->
 
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="side_nav_book_img" style="margin-left:5vh;margin-bottom:20px;"><br>
-
-        <?php 
-            if(isset($_SESSION['login_user']))
-                {
-                    echo "<img class='img-circle profile_img' style='width: 100px;height:100px;'  src='images/".$_SESSION['img']."'>"; 
-                    echo"<br>";
-                    echo $_SESSION['login_user'];
-                }
-            ?>
-                
-        </div>
-        <a href="profile.php">Profile</a>
-        <a href="book_add.php">Add Books</a>
-        <a href="#">Delete Request</a>
-        <a href="issue_book.php">Issue Information</a>
-        </div>  
-
-    <div id="main">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-        <div class="search_bar">
+    <div class="search_bar">
         <form class="navbar-form" method="post" name="form1">
             <!-- ___________________Search bar____________________  -->
             <div>
                 <input class="form-control" type="text" name="search" placeholder="search books..." required>
-                <button style="background-color: #b5b733;" type="submit" name="submit" class="btn btn-default">
+                <button style="background-color: #20B8F3;" type="submit" name="submit" class="btn btn-default">
                     <span class="glyphicon glyphicon-search"></span>
                 </button>
             </div>
             
         </form>
             
-    </div>
-    <h2>List Of Books</h2>
+        </div>
+    
+   
     <?php
         if(!isset($_SESSION['login_user']))
         {
@@ -115,8 +94,9 @@
                 }
                 else {
                     ?>
+                    <div style="overflow:scroll; height: 600px;width: 100%;">
                     <table class="table table-bordered table-hover">
-                        <tr style="background-color: #b5b733;">
+                        <tr style="background-color: #20B8F3;">
                             <th>ID </th>
                             <th>Image</th>
                             <th>Book-Name</th>
@@ -149,14 +129,16 @@
                 }
                 ?>
                     </table>
+                    </div>
                 <?php
             }
 
             else{
                 $res=mysqli_query($db,"SELECT * FROM `books` order by `books`.`bid` ASC;");
                 ?>
+                <div style="overflow:scroll; height: 600px;width: 100%;">
                 <table class="table table-bordered table-hover">
-                        <tr style="background-color: #b5b733;">
+                        <tr style="background-color: #20B8F3;">
                             <th>ID </th>
                             <th>Image</th>
                             <th>Book-Name</th>
@@ -192,6 +174,7 @@
                 }
                 ?>
                     </table>
+                </div>
                     <?php
         }
     }
@@ -202,6 +185,33 @@
     //    __book after login
         if(isset($_SESSION['login_user']))
         {
+            ?>
+            <div id="main">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="side_nav_book_img" style="margin-left:5vh;margin-bottom:20px;"><br>
+               
+            
+
+            <?php 
+            if(isset($_SESSION['login_user']))
+                {
+                    echo "<img class='img-circle profile_img' style='width: 100px;height:100px;'  src='images/".$_SESSION['img']."'>"; 
+                    echo"<br>";
+                    echo $_SESSION['login_user'];
+                }
+            ?>
+                
+        </div>
+        <a href="book_add.php">Add Books</a>
+        <a href="issue_book.php">Issue Information</a>
+    </div> 
+    
+    <?php
+
             if(isset($_POST['submit'])){
                 $q=mysqli_query($db, "SELECT * FROM `books` where `name` like '%$_POST[search]%' ");
                 if(mysqli_num_rows($q)==0){
@@ -212,8 +222,9 @@
                 else{
                     
                     ?>
+                    <div style="overflow:scroll; height: 600px;width: 100%;">
                     <table class="table table-bordered table-hover">
-                        <tr style="background-color: #b5b733;">
+                        <tr style="background-color: #20B8F3;">
                             <th>ID </th>
                             <th>Image</th>
                             <th>Book-Name</th>
@@ -251,6 +262,7 @@
 
                      </tr>
                      </table>
+                    </div>
                      <?php
                 }
             }
@@ -258,8 +270,9 @@
             else{
                 $res=mysqli_query($db,"SELECT * FROM `books` order by `books`.`bid` ASC;");
                 ?>
+                <div style="overflow:scroll; height: 600px;width: 100%;">
                 <table class="table table-bordered table-hover">
-                        <tr style="background-color: #b5b733;">
+                        <tr style="background-color: #20B8F3;">
                             <th>ID </th>
                             <th>Image</th>
                             <th>Book-Name</th>
@@ -302,13 +315,14 @@
                 }
                 ?>
                     </table>
+                </div>
                     <?php
             }
                    
         }
         ?> 
     
-    </div>
+    
 
 
     

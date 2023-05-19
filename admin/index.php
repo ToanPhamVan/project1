@@ -1,59 +1,21 @@
-<?php
-    session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Library management</title>
     <link rel="stylesheet" type ="text/css" href="style.css">
-    <style type="textt/css">
-    </style>
+    <title>Online Library Management</title>
+    
 </head>
+<?php
+    
+    include "navbar.php";
+?>
 <body>
-    <div class="wrapper">
-        <header class="index-header">
-            <div class="logo">
-                <img src=".\images\9.png">
-                <h1 class="title" style="color: white">Online Library Management System</h1>
-            </div>
-            <?php
-                if (isset($_SESSION['login_user']))
-                {?>
-                    <nav class="index-nav">
-                        <ul>
-                            <li><a href="index.php">Home</a></li>
-                            <li><a href="books.php">Books</a></li>
-                            <li><a href="logout.php">Log-out</a></li>
-                            <li><a href="feedback.php">Feedback</a></li>
-                        </ul>
-                    </nav> 
-                    <?php                   
-                }
-                
-           
-               
-                else{
-                    ?>
-                        <nav class="index-nav">
-                            <ul>
-                                <li><a href="index.php">Home</a></li>
-                                <li><a href="books.php">Books</a></li>
-                                <li><a href="login_admin.php">Login</a></li>
-                                <!-- <li><a href="">Admin-Login</a></li> -->
-                                <li><a href="feedback.php">Feedback</a></li>
-                            </ul>
-                        </nav>
-                        <?php
-                }
-                ?>
-           
-        </header>
-
-
-        <section class="index-section">
+    
+        <div class="index-section"  style="background-image: url(./images/index-img.jpg); margin-top: -20px;">
             <br><br><br>
             <div class="admin_section_img">
                 <div class="box">
@@ -63,7 +25,7 @@
                         <h1 style="text-align: center;font-size:20px ;">Close at 15:00</h1>
                 </div>
             </div>
-        </section>
+            </div>
         <footer class="index-footer">
             <p>
                 Email: library@gmail.com
@@ -73,6 +35,5 @@
             
             
         </footer>
-    </div>
 </body>
 </html>

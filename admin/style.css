@@ -102,18 +102,7 @@ input, select {
 }
 
 /* Main code for style  */
-.wrapper
-{
-    height: 660px;
-    width: 1350px;
-    /* background-color: red; */
-}
-.index-header{
-    height: 130px;
-    width: 1364px;
-    background-color: black;
-    padding: 10px;
-}
+
 
 /* header img{
     padding-left: 55px;
@@ -125,14 +114,14 @@ input, select {
     font-size: 24px;
 } */
 .index-section {
-    height: 450px;
-    width: 1364px;
-    background-color:gray;
+    height: 650px;
+    width: inherit;
+    
    
 }
 .index-footer{
     height: 82px;
-    width: 1361px;
+    width: inherit;
     background-color: black;
 }
 .logo {
@@ -158,12 +147,7 @@ li a{
     display: inline-block;
     line-height: 80px;
 }
-.index-section{
-    height: 550px;
-    background-image: url(images/1.jpg);
-    margin-top: 0px;
 
-}
 .box{
     height: 300px;
     width: 450px;
@@ -192,9 +176,9 @@ li a{
 
 .login_student_section {
     height: 550px;
-    background-image: url(images/3.jpg); 
     color: white;
-    /* align-items: center; */
+    background-image: linear-gradient(#c94b4b,#4b134f);
+
     text-align: center;
     position: relative;
     top: -20px;
@@ -202,11 +186,12 @@ li a{
 .login_student_form  {
     height: 400px;
     width: 400px;
-    background-color: #48D1CC;
+    background-color: #000;
     display: inline-block;
-    opacity: .7;
+    opacity: .6;
     position: relative;
     top: 10%;
+    border-radius: 10px;
 }
 
 
@@ -230,7 +215,7 @@ form .login{
 
 .registration_section {
     height: 630px;
-    background-image: url(images/4.png);
+    background-image: linear-gradient(#c94b4b,#4b134f);
     margin-top: -50px; 
     color: white;
     align-items: center;
@@ -248,6 +233,7 @@ form .login{
     color: white;
     position: relative;
     top: 2.5%;
+    border-radius: 10px;
 }
 .registration_form_input{
     margin: auto 30px;

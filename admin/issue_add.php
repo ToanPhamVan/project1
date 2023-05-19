@@ -41,7 +41,6 @@ use function PHPSTORM_META\sql_injection_subst;
     <form method="post" class="issue_form" action="">
         <h1 style="text-align:center;color: white">Add new book issue</h1>
         <div class="issue_form_input" style="height: 400px; width: 300px; text-align: center">
-            <input class="form-control" style=" margin: 40px auto 0px 50%;" type="text" name="issue_id" placeholder="Issue Id" required> 
             <input class="form-control" style=" margin: 40px auto 0px 50%;" type="text" name="id" placeholder="Student Id" required> 
             <input class="form-control" style=" margin: 40px auto 0px 50%;" type="text" name="bid" placeholder="Book Id" required>
             <label  for="issue" style="margin: 15px auto 0 25%;" >Issue Time</label> 
@@ -82,7 +81,7 @@ use function PHPSTORM_META\sql_injection_subst;
                 <?php
             }
                 else{
-                mysqli_query($db,"INSERT INTO `issue_book` VALUES('$_POST[issue_id]','$_POST[id]','$_POST[bid]','$_POST[issue_time]','$_POST[return_time]',DEFAULT, DEFAULT,DEFAULT)");
+                mysqli_query($db,"INSERT INTO `issue_book` VALUES('','$_POST[id]','$_POST[bid]','$_POST[issue_time]','$_POST[return_time]',DEFAULT, DEFAULT,DEFAULT)");
                 mysqli_query($db,"UPDATE `books` SET `quantity`= books.quantity-1 WHERE bid = $_POST[bid]");
                 header("location: issue_book.php");
                 ?>

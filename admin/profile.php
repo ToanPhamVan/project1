@@ -15,7 +15,7 @@
             height: 450px;
             margin: 0 auto;
             color: white;
-            background-color: #7233b7c7;
+            
             border-radius: 5px;
             opacity: .8;
         }
@@ -88,7 +88,7 @@
                     echo "</tr>";
                     echo "<tr>";
                         echo "<td>";
-                            echo "<b> email: </b>";
+                            echo "<b> Email: </b>";
                         echo "</td>";
 
                         echo "<td>";
@@ -97,7 +97,7 @@
                     echo "</tr>";
                     echo "<tr>";
                         echo "<td>";
-                            echo "<b> contact: </b>";
+                            echo "<b> Contact: </b>";
                         echo "</td>";
 
                         echo "<td>";

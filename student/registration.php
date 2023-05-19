@@ -41,15 +41,15 @@
     
         <section class="registration_section">
             <form class="registration_form" name="registration_form" action="" method="post">
-                <h1 style="text-align: center; font-size: 25px;">Library Management System</h1> <br>
-                <h1 style="font-size: 25px;">Sign Up </h1>
+                <!-- <h1 style="text-align: center; font-size: 25px;">Library Management System</h1> <br> -->
+                <br><h1 style="font-size: 25px;">Sign up </h1> <br><br>
                     <div class="registration_form_input">
                             <input class="form-control" type="text" name="firstname" placeholder="First Name" required> <br> <br>
                             <input class="form-control" type="text" name="lastname" placeholder="Last Name" required> <br> <br>
                             <input class="form-control" type="text" name="username" placeholder="Username" required> <br> <br>
                             <input class="form-control" type="password" name="password" placeholder="Enter your password" required> <br><br>
                             <input class="form-control" type="text" name="roll" placeholder="Roll No" required> <br> <br>
-                            <input class="form-control" type="email" name="email" placeholder="Enter your email" required> <br> <br>
+                            <input class="form-control" type="email" name="email" placeholder="Enter your email" required> <br> 
                             <input class="btn btn-default" type="submit" name="submit" value="Sign up" style="color: black; width: 70px; height: 30px;"> <br>
                     </div>
                 </form>
@@ -70,7 +70,7 @@
             }
             if($count==0)
             {
-                mysqli_query($db,"INSERT INTO `STUDENT` VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[username]','$_POST[password]','$_POST[roll]','$_POST[email]','userimage.png');");
+                mysqli_query($db,"INSERT INTO `STUDENT` VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[username]','$_POST[password]','$_POST[roll]','$_POST[email]','user.png');");
                 ?>
                 <script type="text/javascript">
                     alert("Sign up successful");
